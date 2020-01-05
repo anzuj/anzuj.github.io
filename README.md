@@ -1,2 +1,2 @@
-# anzuj.github.io
-testing hosting via github with a custom domain (anzudev.com) from godaddy
+# anzuj.github.io / anzudev.com
+personal portfolio site in the making
