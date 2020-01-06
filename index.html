@@ -33,20 +33,23 @@
             <img width="200px" src="https://i.imgur.com/uJS3zI5.jpg" alt="cat">
         
         
-         <?=$thankYou ?>
+  <form
+  action="https://formspree.io/mlegyelg"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
 
-    <form method="post" action="http://formspree.io/anzelika91@gmail.com">
-        <label>Name:</label>
-        <input name="sender">
+  <!-- your other form fields go here -->
 
-        <label>Email address:</label>
-        <input name="senderEmail">
-
-        <label>Message:</label>
-        <textarea rows="5" cols="20" name="message"></textarea>
-
-        <input type="submit" name="submit">
-    </form>
+  <button type="submit">Send</button>
+</form>
         
         
     </div>
