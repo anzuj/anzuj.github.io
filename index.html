@@ -1,20 +1,4 @@
-<?php
 
-if($_POST["submit"]) {
-    $recipient="anzelika91@gmail.com";
-    $subject="Message from your portfolio site!";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +35,7 @@ if($_POST["submit"]) {
         
          <?=$thankYou ?>
 
-    <form method="post" action="contact.php">
+    <form method="post" action="http://formspree.io/anzelika91@gmail.com">
         <label>Name:</label>
         <input name="sender">
 
