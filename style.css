@@ -619,6 +619,14 @@ margin: 0 0 0 auto;
 
 @media screen and (max-width: 600px) {
 
+  .landing-text h1{
+    font-size: 6.5rem;
+  }
+
+  body{
+    max-width: 100vw;
+  }
+
   .landingbtn{
     width: 16rem;
   }
