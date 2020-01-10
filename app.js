@@ -1,33 +1,28 @@
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-
-particlesJS.load('particles-js', 'assets/particles.json', function () {
-  console.log('callback - particles.js config loaded');
-});
-
-
-
-// $(".menu-toggler").hover(function() {
-//   $(".bar").css("background-color", "#9d33b");
-// }, function() {
-//   $(".bar").css("background-color", "rgb(107, 184, 180)");
-// });
-
 
 $(document).ready(function () {
+  
+  particlesJS.load('particles-js', 'assets/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+  });
+  
 
-  // unsure why showing extra text does not work :(
-  $(".expandDetails").on("click", function () {
+// show portfolio item extra content
+ $(".expandDetails").on("click", function () {
+  $(this).parent().siblings(".portfolio-long").slideToggle(500);
+  $(this).children(".arrowDown").toggle();
+  $(this).children(".arrowUp").toggle();
+  });
 
-   $(".portfolio-long").slideToggle(500);
-    // $(".portfolio-long").toggle();
-    $(".arrowDown").toggle();
-    $(".arrowUp").toggle();
-    
+ 
+   // menutoggle hover
+   $(".menu-toggler").hover(function() {
+    $(".bar").css("background-color", "#9d33b");
+  }, function() {
+    $(".bar").css("background-color", "rgb(107, 184, 180)");
   });
   
 
   $('.menu-toggler').hover(function(){$(".bar").toggleClass('bar-hover');});
-
   $(".menu-toggler").on("click", function () {
     $(this).toggleClass("open");
     $(".top-nav").toggleClass("open");
@@ -50,9 +45,10 @@ scrollTop: $($(this).attr("href")).offset().top
        }, 1000); 
   });
 
+  // animations
   AOS.init({
     easing: "ease",
-    duration: 1400,
+    duration: 1200,
     once: true
   })
 
