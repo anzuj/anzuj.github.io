@@ -1,5 +1,6 @@
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -28,9 +29,9 @@ a {
   color: #eee;
 }
 
-p {
+section p {
   font-size: 1.8rem;
-  font-weight: 200;
+  font-family: "Open Sans", "sans-serif";
 }
 
 img {
@@ -211,7 +212,7 @@ header {
 
 /* name */
 .landing-text h1 {
-  font-size: 9rem;
+  font-size: 8rem;
   font-weight: 500;
   font-family: "Kaushan Script", sans-serif;
   background: linear-gradient(to top, #31c29e 25%, #9d33bb);
@@ -223,9 +224,11 @@ header {
 }
 
 .landing-text h6 {
+  font-family: "Open Sans", "sans-serif";
   font-size: 3rem;
   font-weight: 200;
   margin-bottom: 2rem;
+
 }
 
 
@@ -243,6 +246,11 @@ header {
 
 }
 
+.landingbtn p {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 2rem;
+}
+
 .landingbtn:hover {
   transform: scale(1.05);
   background-color: rgb(134, 93, 161);
@@ -250,6 +258,7 @@ header {
 
 /* typewriter */
 .txt-type>.txt {
+  font-family: "Open Sans", "sans-serif";
   border-right: 0.2rem solid #777;
 }
 
@@ -341,9 +350,8 @@ header {
 /*Start services*/
 .my-skills {
   margin-top: 10rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2.5rem;
+  display: flex;
+flex-flow: row;
   text-align: center;
 }
 
@@ -541,6 +549,11 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
+  .my-skills{
+    flex-flow: row wrap;
+  }
+
   .landing-text h1 {
     font-size: 8rem;
     line-height: 1.1;
