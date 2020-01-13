@@ -862,7 +862,7 @@ textarea.input100 {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 31px;
-  background-color: #827ffe;
+  background-color: rgb(151, 108, 180);
   pointer-events: none;
   
   -webkit-transition: all 0.4s;
