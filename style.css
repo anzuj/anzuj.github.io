@@ -17,10 +17,7 @@
   font-weight: 900;
   font-size: 2rem;
 }
-.code{
-  display:inline-block;
-  background-color: rgba(76, 83, 112, 0.541);
-}
+
 .portfolio-long ul{
   margin-left: 2rem;
   font-size: 1.8rem;
