@@ -21,6 +21,15 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="app.js"></script>
+
+    <!-- Google recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+     </script>
+
     <meta name="theme-color" content="#090a20" />
 
 </head>
@@ -345,7 +354,7 @@
                     <div class="break"></div> <!-- break -->
 
                     <div class="portfolio-long">
-                        <img class="extrapic" align="right" src="images/timetable.jpg" alt="timetable">
+                        <img class="extrapic" align="right" src="images/timetable.JPG" alt="timetable">
                         <div class="subheading">GOAL:</div>
                         <p>
                             Make a website for a magic school larp, allowing players to conveniently get their
@@ -538,7 +547,7 @@
                             </div>
 
                             <div class="container-contact100-form-btn">
-                                <button class="contact100-form-btn">
+                                <button data-sitekey="6LfhWs8UAAAAABITkI6_V0Zd3fVr6SKQ1BvxYG_f" data-callback='onSubmit' class="g-recaptcha contact100-form-btn">
                                     <span>
                                         <i class="fas fa-paper-plane m-r-6" aria-hidden="true"></i>
                                         Send
