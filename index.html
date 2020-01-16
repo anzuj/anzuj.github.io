@@ -51,6 +51,9 @@
                         <a href="#portfolio" class="nav-links">Portfolio</a>
                     </li>
                     <li>
+                        <a href="#gallery" class="nav-links">Gallery</a>
+                    </li>
+                    <li>
                         <a href="#contact" class="nav-links">Contact</a>
                     </li>
                     <li>
@@ -346,7 +349,21 @@
                     <div class="break"></div> <!-- break -->
 
                     <div class="portfolio-long">
-                        <img class="extrapic" align="right" src="images/timetable.JPG" alt="timetable">
+
+                        <!-- clickable thumbnail -->
+                        <a href="#timetable">
+                            <img align="right" class="thumb extrapic" src="images/timetable.JPG">
+                        </a>
+
+                        <div class="lightbox" id="timetable">
+                            <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                            <img src="images/timetable.JPG">
+                        </div>
+                        <!-- /clickable thumbnail -->
+
+
+
+
                         <div class="subheading">GOAL:</div>
                         <p>
                             Make a website for a magic school larp, allowing players to conveniently get their
@@ -372,7 +389,8 @@
                                 <li>The tiny touches, color scheme and fonts. This project allowed a lot more creativity
                                     and I very much enjoyed choosing fonts, background patterns and tiny logos to
                                     artistically illustrate the button options. I also learned about the
-                                <i style="color: rgb(99, 99, 201)">name="theme-color</i>  meta tag , changing mobile browser color:
+                                    <i style="color: rgb(99, 99, 201)">name="theme-color</i> meta tag , changing mobile
+                                    browser color:
                                     Since the site is meant to be used on mobile devices, matching the browser color
                                     with the body backround color added a nice touch and more of an "app" feel rather
                                     than a website. I'm now using this tag on every one of my projects for that extra
@@ -478,29 +496,337 @@
                                             </div>
 
                                             <div class="portfolio-long">
-                                                <p>
-                                                    <b>GOAL:</b> Make an personal site showcasing a technical engineer's
-                                                    work experience and
-                                                    projects in a more visually appealing way than just sending a resume
-                                                    PDF. <br> <br>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-                                                    dolorem vel, cum deleniti
-                                                    ab illum distinctio reprehenderit hic aliquam iste dolores.
-                                                    <br> <br>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-                                                    dolorem vel, cum deleniti
-                                                    ab illum distinctio reprehenderit hic aliquam iste dolores.
-                                                </p> <br> <br>
-                                            </div>
-                                        </div>
-                                        <!-- /port4 -->
 
+                                                <div class="subheading">GOAL:</div>
+                                                <p>Make a fluid single-page personal portfolio site showcasing my skills
+                                                    as a front end web developer.</p>
 
+                                                <div class="subheading">LEARNING POINTS:</div>
 
+                                                <ul>
+                                                    <img class="extrapic" align="right" src="images/nav.jpg"
+                                                        alt="toggle">
+                                                    <li> Visual appeal versus user friendliness. I made this website
+                                                        with a help of a tutorial which included a flamboyant animated
+                                                        fullscreen toggle menu. None of the menu items were visible even
+                                                        on full desktop view. After implementing it and scrolling on my
+                                                        site, I
+                                                        realised it was actually a bit disorienting. So I scrapped the
+                                                        initial navbar code and opted for a sticky
+                                                        top navigation instead, allowing anyone on this site to navigate
+                                                        with ease. </li>
+                                                    <li>Making a site from scratch with vanilla CSS/HTML, not using any
+                                                        frameworks doing the alignments and responsiveness thinking for
+                                                        me. The site you're on right now has been an amazing opportunity
+                                                        to practice flexbox.</li>
+                                                    <li>Pros and cons of libraries. This site implements AOS animations,
+                                                        but one whole day of coding was wasted trying to debug a very
+                                                        weird margin in mobile view which was explained nowhere in my
+                                                        code. By the end of the day I found out that AOS library's
+                                                        classes fade-right/fade-left were the culprits, creating an odd
+                                                        margin in mobile viewports that no inspector could identify the
+                                                        cause of. I learned a lot here through process of elimination,
+                                                        squinting at the box model and googling, which I am sure helps
+                                                        me debug future weird visual errors faster. </li>
+                                                    <li>Form functionality on static Github pages. Since I am not yet
+                                                        all that proficient in backend business and Github does not
+                                                        support PHP, I had to get creative with the contact form you can
+                                                        see </li>
+                                                    <li>Using a animations as a background. I found <a
+                                                            href="http://https://vincentgarreau.com/particles.js/"
+                                                            target="_blank">particles.js library</a> actually a long
+                                                        time ago and saved it for a special project. It ended up being
+                                                        on my own site right here! Implementing this library was good
+                                                        practice of learning abot z-index and making sure the animation
+                                                        fills the entire background without interfering with other page
+                                                        elements.</li>
+
+                                                    <!-- clickable thumbnail -->
+                                                    <a href="#beforeafter">
+                                                        <img align="right" class="thumb extrapic"
+                                                            src="images/beforeafter.jpg">
+                                                    </a>
+
+                                                    <div class="lightbox" id="beforeafter">
+                                                        <a href="#_" class="btn-close"><i
+                                                                class="fas fa-times-circle"></i></a>
+                                                        <img src="images/beforeafter.jpg">
+                                                    </div>
+                                                    <!-- /clickable thumbnail -->
+
+                                                    <li>Finding a gallery solution without Bootstrap. This was quite
+                                                        tricky actually, since I've been so used to Bootstrap's
+                                                        lightbox. However, after some surfing I found <a
+                                                            href="https://github.com/Cerealkillerway/css-lightbox"
+                                                            target="_blank">this lightweight gallery</a> without a
+                                                        single line of Javascript! I redesigned it to fit my needs:
+                                                        <ul class="nested">
+                                                            <li>Fixed thumbnail sizes for a clean look</li>
+                                                            <li>Object-fit: cover on thumbnails to remove distortion
+                                                            </li>
+                                                            <li>Repositioned the previous/next buttons</li>
+                                                            <li>Restyled the buttons by replacing them with Font Awesome
+                                                                icons</li>
+                                                                <li>Adjusted border radius and hover effects on thumbnails</li>
+                                                        </ul>
+
+<li>The above gallery solution was actually a really pleasant surprise since I was looking for a lightweight solution for clickable thumbnail images for ages (such as the before/after picture here)! I'll surely save this code snippet for later use.</li>
+                                                </ul>
+                        </p>
                     </div>
+                </div>
+                <!-- /port4 -->
+
+
+
+            </div>
         </section>
         <!-- /portfolio section -->
 
+        <!-- gallery section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+
+
+                <div class="section-heading">
+                    <h1>Gallery</h1>
+                    <h6>Examples of my illustrative work commissions & mug designs</h6>
+                </div>
+
+                <a href="#img1">
+                    <img class="thumb" src="images/gallery/1.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img1">
+                    <a href="#img18" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/1.jpg">
+                    <a href="#img2" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img2">
+                    <img class="thumb" src="images/gallery/2.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img2">
+                    <a href="#img1" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/2.jpg">
+                    <a href="#img3" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img3">
+                    <img class="thumb" src="images/gallery/3.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img3">
+                    <a href="#img2" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/3.jpg">
+                    <a href="#img4" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img4">
+                    <img class="thumb" src="images/gallery/4.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img4">
+                    <a href="#img3" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/4.jpg">
+                    <a href="#img5" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img5">
+                    <img class="thumb" src="images/gallery/5.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img5">
+                    <a href="#img4" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/5.jpg">
+                    <a href="#img6" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img6">
+                    <img class="thumb" src="images/gallery/6.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img6">
+                    <a href="#img5" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/6.jpg">
+                    <a href="#img7" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img7">
+                    <img class="thumb" src="images/gallery/7.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img7">
+                    <a href="#img6" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/7.jpg">
+                    <a href="#img8" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img8">
+                    <img class="thumb" src="images/gallery/8.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img8">
+                    <a href="#img7" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/8.jpg">
+                    <a href="#img9" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img9">
+                    <img class="thumb" src="images/gallery/9.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img9">
+                    <a href="#img8" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/9.jpg">
+                    <a href="#img10" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img10">
+                    <img class="thumb" src="images/gallery/10.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img10">
+                    <a href="#img9" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/10.jpg">
+                    <a href="#img11" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img11">
+                    <img class="thumb" src="images/gallery/11.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img11">
+                    <a href="#img10" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/11.jpg">
+                    <a href="#img12" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+
+                <a href="#img12">
+                    <img class="thumb" src="images/gallery/12.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img12">
+                    <a href="#img11" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/12.jpg">
+                    <a href="#img13" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img13">
+                    <img class="thumb" src="images/gallery/13.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img13">
+                    <a href="#img12" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/13.jpg">
+                    <a href="#img14" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img14">
+                    <img class="thumb" src="images/gallery/14.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img14">
+                    <a href="#img13" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/14.jpg">
+                    <a href="#img15" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img15">
+                    <img class="thumb" src="images/gallery/15.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img15">
+                    <a href="#img14" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/15.jpg">
+                    <a href="#img16" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img16">
+                    <img class="thumb" src="images/gallery/16.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img16">
+                    <a href="#img15" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/16.jpg">
+                    <a href="#img17" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img17">
+                    <img class="thumb" src="images/gallery/17.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img17">
+                    <a href="#img16" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/17.jpg">
+                    <a href="#img18" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+                <a href="#img18">
+                    <img class="thumb" src="images/gallery/18.jpg">
+                </a>
+                <!-- lightbox container hidden with CSS -->
+                <div class="lightbox" id="img18">
+                    <a href="#img17" class="light-btn btn-prev"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a href="#_" class="btn-close"><i class="fas fa-times-circle"></i></a>
+                    <img src="images/gallery/18.jpg">
+                    <a href="#img1" class="light-btn btn-next"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+        <!-- /gallery section -->
+
+
+        <!-- corgi section -->
+        <section class="corgis">
+            <div class="container">
+
+
+                <div class="section-heading">
+                    <h6>Oh good, you're still here! Here are some corgis as a thank you :) </h6>
+                </div>
+
+                <div class="corgi-container">
+                    <div class="corgi">
+                        <img src="images/doggo/1.jpg" alt="">
+                    </div>
+                    <div class="corgi">
+                        <img src="images/doggo/2.jpg" alt="">
+                    </div>
+                    <div class="corgi">
+                        <img src="images/doggo/3.jpg" alt="">
+                    </div>
+                    <div class="corgi">
+                        <img src="images/doggo/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /corgi section -->
 
 
 
