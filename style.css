@@ -335,9 +335,10 @@ header {
   color: #4267b2
 }
 
-.fa-instagram:hover {
-  color: #a442dd;
+.fa-linkedin:hover{
+  color: #4267b2;
 }
+
 
 .fa-github:hover {
   color: rgb(51, 51, 51);
@@ -492,7 +493,7 @@ flex-flow: row;
  }
  
  
- .portfolio-long a{
+ .portfolio-long a, .bio a{
    color: rgb(211, 171, 230);
    font-weight: 600;
  }
@@ -506,7 +507,7 @@ flex-flow: row;
    font-size: 2rem;
  }
  
- .portfolio-long ul{
+ .portfolio-long ul, .bio ul{
    margin-left: 2rem;
    font-size: 1.8rem;
    text-align: left;
@@ -641,6 +642,41 @@ flex-flow: row;
 }
 /* End corgi section */
 
+
+/* start personal */
+.bio{
+  text-align: left;
+  padding-bottom: 100px;
+}
+
+
+.bio-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.bio-container img{
+  width: 30%;
+  border-radius: 30px;
+  margin: 1rem;
+  object-fit: cover;
+  }
+
+
+@media screen and (max-width: 600px){
+  .bio-container img{
+    border-radius: 10px;
+    margin: 0.5rem;
+    }
+}
+
+
+
+/* end personal */
+
+
 /*Start footer*/
 
 .copyright p {
@@ -771,7 +807,7 @@ flex-flow: row;
     width: 100%;
    }
 
- section p, .portfolio-long ul{
+ section p, .portfolio-long ul, .bio ul{
     font-size: 1.5rem;
   }
 
