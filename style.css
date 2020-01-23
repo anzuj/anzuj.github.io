@@ -667,8 +667,16 @@ flex-flow: row;
 
 @media screen and (max-width: 600px){
   .bio-container img{
+    width: 40%;
     border-radius: 10px;
     margin: 0.5rem;
+    }
+
+    .bio-container{
+     
+      flex-flow: row wrap;
+      justify-content: center;
+    
     }
 }
 
