@@ -527,8 +527,10 @@ flex-flow: row;
 
 /* Start gallery */
 .thumb {
-  height: 170px;
- width: 170px;
+  width: 20%;
+  height: 180px;
+  /* height: 170px;
+ width: 170px; */
   transition: border-width 0.15s linear;
   margin: 0.1rem;
   object-fit: cover;
@@ -738,6 +740,11 @@ flex-flow: row;
 
 @media screen and (max-width: 1120px) {
 
+  .thumb{
+    width: 30%;
+    height: 180px;
+  }
+
   .extrapic{
     width: 60%;
    }
@@ -753,9 +760,18 @@ flex-flow: row;
 
 @media screen and (max-width: 768px) {
 
+  section{
+    padding: 3rem 0;
+  }
+
+  .section-heading {
+    margin-bottom:2rem;
+  }
+
 
   .my-skills{
     flex-flow: row wrap;
+    margin-top:2rem;
   }
 
   .landing-text h1 {
@@ -799,7 +815,7 @@ flex-flow: row;
 
   .thumb {
     height: 130px;
-   width: 130px;
+   width: 45%;
   }
 
   .corgi{
