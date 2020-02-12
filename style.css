@@ -906,6 +906,14 @@ canvas {
 
 /*Start contact*/
 
+#email{
+  color: rgb(142, 142, 204);
+}
+#email:hover{
+  color: rgb(114, 114, 173);
+}
+
+
 .grecaptcha-badge { opacity:0;}
 
 input {
