@@ -344,6 +344,11 @@ header {
   color: rgb(51, 51, 51);
 }
 
+.mdi-dev-to:hover {
+  color: rgb(175, 175, 175);
+}
+
+
 /*End about*/
 
 /*Start services*/
@@ -392,6 +397,15 @@ flex-flow: row;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+}
+
+.skillicons-left {
+  margin-top: 1rem;
+  font-size: 4rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
   align-items: center;
 }
 
